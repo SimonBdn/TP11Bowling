@@ -21,7 +21,13 @@ public class PartieMonoJoueur {
 	 * @return vrai si le joueur doit lancer à nouveau pour continuer son tour, faux sinon	
 	 */
 	public boolean enregistreLancer(int nombreDeQuillesAbattues) {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+		boolean a; 
+		if(nombreDeQuillesAbattues < 10 ){
+			a = 
+		}
+		if(partie.isEnd()){
+			throw IllegalArgumentException ("La partie est terminée !");
+		}
 	}
 
 	/**
