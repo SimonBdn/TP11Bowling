@@ -7,7 +7,7 @@ public class Lancer {
 		if(nbPins > 10 || nbPins <0){
 			throw new IllegalArgumentException("Le nombre de quilles est incorecte.");
 		}
-		else {this.nbPins = nbPins;}
+		this.nbPins = nbPins;
 	}
 	
 	public int getNbPins(){

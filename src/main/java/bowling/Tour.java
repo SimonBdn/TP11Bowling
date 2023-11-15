@@ -1,13 +1,21 @@
 package bowling;
 
+import java.util.ArrayList;
+
 public class Tour {
-
-
-	public void faireUnStrike(){
-
+	
+	private ArrayList<Lancer> lancer;
+	
+	private TypeLancer typeLancer;
+	
+	
+	public Tour(ArrayList<Lancer> lancer, TypeLancer typeLancer){
+		this.lancer = new ArrayList<>();
+		this.typeLancer = typeLancer;
 	}
-
-	public void faireUnSpare(){
-
+	public Tour(ArrayList<Lancer> lancer){
+		this.lancer = new ArrayList<>();
+		this.typeLancer = TypeLancer.NORMAL;
 	}
+	
 }

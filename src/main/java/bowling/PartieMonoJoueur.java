@@ -25,7 +25,7 @@ public class PartieMonoJoueur {
 		if(nombreDeQuillesAbattues < 10 ){
 			a = 
 		}
-		if(partie.isEnd()){
+		if(){
 			throw IllegalArgumentException ("La partie est terminée !");
 		}
 	}
