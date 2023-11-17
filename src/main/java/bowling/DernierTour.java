@@ -20,10 +20,7 @@ public class DernierTour extends Tour {
 			super.addScoreLancer(nbPins);
 		}
 	}
-
-	public int getNbPinsTour() {
-		throw new UnsupportedOperationException("Pas encore implémenté");
-	}
+	
 
 	@Override
 	public int getNumLancer() {

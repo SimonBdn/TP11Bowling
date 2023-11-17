@@ -3,13 +3,13 @@ package bowling;
 public class Tour {
 	private Lancer lancer1;
 	private Lancer lancer2;
-	private TypeLancer typelanccer;
+	private TypeLancer typelancer;
 	private int scoreTour = 0;
 
 	public Tour() {
 		lancer1 = new Lancer();
 		lancer2 = new Lancer();
-		typelanccer = TypeLancer.NORMAL;
+		typelancer = TypeLancer.NORMAL;
 	}
 
 	public int getScoreTour(Lancer l1, Lancer l2) {
@@ -26,31 +26,31 @@ public class Tour {
 		return (this.scoreTour);
 	}
 
-	public void addScoreLancer(int nbQuille) {
-		if (nbQuille < 0 || nbQuille > 10){
-			throw new IllegalArgumentException("nbQuille must be between 0 and 10");
+	public void addScoreLancer(int nbPins) {
+		if (nbPins < 0 || nbPins > 10){
+			throw new IllegalArgumentException("nLe nombre de quilles doit être compris entre 0 et 10.");
 		}
 		if (this.getNumLancer() == 1) {
-			addScoreLancer(nbQuille, lancer1);
-			if (nbQuille == 10) {
-				typelanccer = TypeLancer.STRIKE;
+			addScoreLancer(nbPins, lancer1);
+			if (nbPins == 10) {
+				typelancer = TypeLancer.STRIKE;
 			}
 		} else if (this.getNumLancer() == 2) {
-			//TODO : implement throw declaration with working 10th lancer
+			
 			/*
 			if (lancer1.getNbQuille() + nbQuille >10){
 				throw new IllegalArgumentException("Lancers make more than 10 quilles");
 			}
 			 */
-			addScoreLancer(nbQuille, lancer2);
+			addScoreLancer(nbPins, lancer2);
 			if (lancer1.getNbPins() + lancer2.getNbPins() == 10){
-				typelanccer = TypeLancer.SPARE;
+				typelancer = TypeLancer.SPARE;
 			}
 		}
 	}
 
-	public void addScoreLancer(int nbQuille, Lancer lancer) {
-		lancer.setNbPins(nbQuille);
+	public void addScoreLancer(int nbPins, Lancer lancer) {
+		lancer.setNbPins(nbPins);
 	}
 
 	public int getNbQuilleTour() {

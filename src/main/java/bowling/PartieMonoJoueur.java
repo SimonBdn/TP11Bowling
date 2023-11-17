@@ -24,16 +24,16 @@ public class PartieMonoJoueur {
 	/**
 	 * Cette méthode doit être appelée à chaque lancer de boule
 	 *
-	 * @param nombreDeQuillesAbattues le nombre de quilles abattues lors de ce lancer
+	 * @param nombreDePinsAbattues le nombre de quilles abattues lors de ce lancer
 	 * @throws IllegalStateException si la partie est terminée
 	 * @return vrai si le joueur doit lancer à nouveau pour continuer son tour, faux sinon	
 	 */
-	public boolean enregistreLancer(int nombreDeQuillesAbattues) {
+	public boolean enregistreLancer(int nombreDePinsAbattues) {
 		int currentTour = this.numeroTourCourant() - 1;
 		if (this.numeroTourCourant() <= 0) {
 			throw new IllegalStateException("On ne peut pas enregistrer un lancer quand la partie est finie.");
 		}
-		tours[this.numeroTourCourant() - 1].addScoreLancer(nombreDeQuillesAbattues);
+		tours[this.numeroTourCourant() - 1].addScoreLancer(nombreDePinsAbattues);
 		if (tours[currentTour].getNumLancer() == 0) {
 			return false;
 		}
